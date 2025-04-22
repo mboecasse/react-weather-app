@@ -1,0 +1,173 @@
+/* Weather Icon component styles */
+.weather-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.condition-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Fallback icons */
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sunny icon */
+.icon-sunny .icon {
+  background-color: #ffdd00;
+  box-shadow: 0 0 10px rgba(255, 221, 0, 0.5);
+}
+
+.icon-sunny .icon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,221,0,1) 70%);
+}
+
+/* Cloudy icon */
+.icon-cloudy .icon {
+  background-color: #e4e4e4;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon-cloudy .icon::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #e4e4e4;
+  border-radius: 50%;
+  top: -10px;
+  left: 10px;
+}
+
+.icon-cloudy .icon::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #e4e4e4;
+  border-radius: 50%;
+  top: -5px;
+  left: -5px;
+}
+
+/* Rainy icon */
+.icon-rainy .icon {
+  background-color: #5c9edb;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon-rainy .icon::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icon-rainy .icon::after {
+  content: '|||';
+  color: #5c9edb;
+  font-weight: bold;
+  letter-spacing: 5px;
+  transform: rotate(20deg);
+}
+
+/* Snowy icon */
+.icon-snowy .icon {
+  background-color: #e4e4e4;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon-snowy .icon::after {
+  content: '❄❄';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #e4e4e4;
+  font-size: 14px;
+}
+
+/* Stormy icon */
+.icon-stormy .icon {
+  background-color: #445870;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon-stormy .icon::before {
+  content: '⚡';
+  position: absolute;
+  font-size: 18px;
+  color: #ffdd00;
+}
+
+/* Foggy icon */
+.icon-foggy .icon {
+  background-color: #e4e4e4;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 35px;
+}
+
+.icon-foggy .icon::before {
+  content: '';
+  width: 80%;
+  height: 4px;
+  background-color: #cbcbcb;
+  border-radius: 2px;
+}
+
+.icon-foggy .icon::after {
+  content: '';
+  width: 60%;
+  height: 4px;
+  background-color: #cbcbcb;
+  border-radius: 2px;
+}
+
+/* Default icon */
+.icon-default .icon {
+  background-color: #aaaaaa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.icon-default .icon::after {
+  content: '?';
+}
