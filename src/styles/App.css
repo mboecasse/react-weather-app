@@ -1,0 +1,28 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.error {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: center;
+}
